@@ -1,0 +1,9 @@
+<%= erb :_event_errors %>
+
+<form method="post" action="/events/create">
+	<input type="text" name="event[title]" placeholder="Event Title" value="<%= @event.title %>" />
+	<input type="text" name="event[organizer_name]" placeholder="Event Organizer" value="<%= @event.organizer_name %>" />
+	<input type="text" name="event[organizer_email]" placeholder="Event Organizer Email" value="<%= @event.organizer_email %>" />
+	Event date: <input type="date" name="event[date]" value="<%= @event.date %>" />
+	<input type="submit" value="Create Event">
+</form>
